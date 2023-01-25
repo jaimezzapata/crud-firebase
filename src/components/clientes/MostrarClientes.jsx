@@ -11,6 +11,8 @@ const MostrarClientes = () => {
   const listarClientes = async () => {
     const datos = await getDocs(tablaClientes)
     console.log(datos)
+    setClientes(datos.docs.map((doc)=>({...doc.data(), id: doc.id})))
+    console.log(clientes)
   }
 
   useEffect(()=>{
@@ -30,6 +32,19 @@ const MostrarClientes = () => {
             <th>Acciones</th>
           </tr>
         </thead>
+        <tbody>
+          {
+            clientes.map((cliente)=>(
+              <tr key={cliente.id}>
+                <td>{cliente.cedula}</td>
+                <td>{cliente.nombre}</td>
+                <td>{cliente.correo}</td>
+                <td>{cliente.telefono}</td>
+                <td></td>
+              </tr>
+            ))
+          }
+        </tbody>
       </table>
     </section>
   )

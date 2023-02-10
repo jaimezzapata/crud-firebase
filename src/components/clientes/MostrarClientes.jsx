@@ -59,9 +59,9 @@ const MostrarClientes = () => {
                 >
                   <i class="fa fa-trash"></i>
                 </button>
-                <Link to={`/editar/${cliente.id}`} className="btn btn-warning">
+                <button className="btn btn-warning">
                   <i class="fa fa-pen"></i>
-                </Link>
+                </button>
               </td>
             </tr>
           ))}

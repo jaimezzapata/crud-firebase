@@ -15,16 +15,6 @@ const router = createBrowserRouter([
     element: <MostrarClientes />,
     errorElement: <Error />
   },
-  {
-    path: '/crear',
-    element: <CrearCliente />,
-    errorElement: <Error />
-  },
-  {
-    path: '/editar/:id',
-    element: <EditarCliente />,
-    errorElement: <Error />
-  },
 ])
 
 function App() {
